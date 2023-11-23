@@ -1,0 +1,17 @@
+.{
+    .name = "zydis",
+    .version = "4.0.0",
+    .paths = .{
+        "src",
+        "include",
+        "tools",
+        "build.zig",
+        "build.zig.zon",
+    },
+    .dependencies = .{
+        .zycore = .{
+            .url = "git+https://github.com/zelosfarm/zycore.git#ae462fdfe58b9bc3c991419c3fe6444a46e3c7f2",
+            .hash = "12200b8ffc81651d7c0a8e0748ee00384487936d506197f8e23727f34bb8f30de3e6",
+        },
+    },
+}

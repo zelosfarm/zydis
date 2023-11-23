@@ -11,3 +11,6 @@ __pycache__
 /doc
 /cmake-build-debug
 /amalgamated-dist
+
+/zig-out
+/zig-cache
