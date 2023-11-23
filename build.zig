@@ -12,6 +12,12 @@ pub fn build(b: *std.Build) void {
         .target = target,
         .optimize = optimize,
     });
+    zydis.want_lto = false;
+    zydis.disable_sanitize_c = true;
+    if (optimize == .Debug or optimize == .ReleaseSafe)
+        zydis.bundle_compiler_rt = true
+    else
+        zydis.strip = true;
     zydis.linkLibC();
     zydis.linkLibrary(b.dependency("zycore", .{
         .target = target,
